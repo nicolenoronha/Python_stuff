@@ -1,0 +1,26 @@
+# Look what learned when taking the Advanced Google Data Analytics Professional Certificate!
+
+# Guess a number!
+
+import random
+
+number = random.randint(1,25)
+attempts = 0
+
+while attempts < 5:
+    print('Guess a number between 1 and 10: ')
+    guess = input()
+    guess = int(guess)
+    attempts += 1
+
+    if guess == number:
+        break
+    elif attempts == 3:
+        break
+    else:
+        print('Nope! Better try again!')
+
+if guess == number:
+    print('Wow! You guessed the number in ' + str(attempts) + ' tries!')
+else:
+    print('Game over! :( The number was ' + str(number) + '.')
